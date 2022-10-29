@@ -13,7 +13,7 @@ int main() {
 	for (int i = 0; i < 100/2; i++)
 		vector_pop(&v, i);
 
-	for (int i = 0; i < v.nmemb; i++)
+	for (int i = 0; i < v.len; i++)
 		printf("%d\n", *(int*)vector_at(&v, i));
 
 	vector_print(&v);
