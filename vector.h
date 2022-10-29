@@ -22,3 +22,5 @@ void* vector_at(const vector *v, const size_t index);
 void vector_pop(vector *v, const size_t index);
 bool vector_isempty(const vector *v);
 bool vector_isfull(const vector *v);
+void vector_replace(vector *v, void *before, void *after);
+bool vector_contains(const vector *v, const void *data);

@@ -78,3 +78,18 @@ bool vector_isempty(const vector *v) {
 bool vector_isfull(const vector *v) {
 	return v->len == v->cap;
 }
+
+void vector_replace(vector *v, void *before, void *after) {
+	void *tmp;
+	for (size_t i = 0; i < v->len; i++)
+		if (memcmp((tmp = vector_at(v, i)), before, v->size) == 0)
+			memcpy(tmp, after, v->size);
+}
+
+bool vector_contains(const vector *v, const void *data) {
+	void *tmp;
+	for (size_t i = 0; i < v->len; i++)
+		if (memcmp((tmp = vector_at(v, i)), data, v->size) == 0)
+			return true;
+	return false;
+}
