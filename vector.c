@@ -5,25 +5,25 @@
 #include <string.h>
 #include <assert.h>
 
-void vector_init(vector* v, const size_t size) {
+void vector_init(vector *v, const size_t size) {
 	v->size=size;
 	v->nmemb=0;
 	v->cap=0;
 	v->data=NULL;
 }
 
-void vector_free(vector* v) {
+void vector_free(vector *v) {
 	v->nmemb=0;
 	v->cap=0;
 	free(v->data);
 	v->data=NULL;
 }
 
-void vector_clear(vector* v) {
+void vector_clear(vector *v) {
 	v->nmemb=0;
 }
 
-void vector_print(const vector* v) {
+void vector_print(const vector *v) {
 	printf("<vector@%p size=%zu nmemb=%zu cap=%zu data@%p>\n", v, v->size, v->nmemb, v->cap, v->data);
 }
 
