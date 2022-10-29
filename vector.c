@@ -94,10 +94,10 @@ bool vector_contains(const vector *v, const void *data) {
 	return false;
 }
 
-void* vector_index(const vector *v, const void *data) {
-	void *tmp;
-	for (size_t i = 0; i < v->len; i++)
-		if (memcmp((tmp = vector_at(v, i)), data, v->size) == 0)
-			return tmp;
-	return NULL;
+size_t vector_index(const vector *v, const void *data) {
+	size_t i;
+	for (i = 0; i < v->len; i++)
+		if (memcmp(vector_at(v, i), data, v->size) == 0)
+			break;
+	return i;
 }
