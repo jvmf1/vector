@@ -7,7 +7,7 @@ int main() {
 	vector_init(&v, sizeof(int));
 
 	for (int i = 0; i < 100; i++)
-		vector_append(&v, &i, 1);
+		vector_append(&v, &i, 1); // In a real application, should check if the return is 0
 
 	vector_print(&v);
 
