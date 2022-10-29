@@ -1,6 +1,5 @@
 #include "vector.h"
 #include <stdio.h>
-#include <string.h>
 
 int main() {
 	vector v;
