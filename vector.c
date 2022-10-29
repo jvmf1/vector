@@ -101,3 +101,11 @@ size_t vector_index(const vector *v, const void *data) {
 			break;
 	return i;
 }
+
+size_t vector_index_ex(const vector *v, const void *data, size_t start) {
+	size_t i;
+	for (i = start; i < v->len; i++)
+		if (memcmp(vector_at(v, i), data, v->size) == 0)
+			break;
+	return i;
+}

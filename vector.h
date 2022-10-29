@@ -25,3 +25,4 @@ bool vector_isfull(const vector *v);
 void vector_replace(vector *v, void *before, void *after);
 bool vector_contains(const vector *v, const void *data);
 size_t vector_index(const vector *v, const void *data);
+size_t vector_index_ex(const vector *v, const void *data, size_t start);
