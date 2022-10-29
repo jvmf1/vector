@@ -93,3 +93,11 @@ bool vector_contains(const vector *v, const void *data) {
 			return true;
 	return false;
 }
+
+void* vector_index(const vector *v, const void *data) {
+	void *tmp;
+	for (size_t i = 0; i < v->len; i++)
+		if (memcmp((tmp = vector_at(v, i)), data, v->size) == 0)
+			return tmp;
+	return NULL;
+}

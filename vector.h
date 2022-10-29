@@ -24,3 +24,4 @@ bool vector_isempty(const vector *v);
 bool vector_isfull(const vector *v);
 void vector_replace(vector *v, void *before, void *after);
 bool vector_contains(const vector *v, const void *data);
+void* vector_index(const vector *v, const void *data);
